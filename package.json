@@ -1,5 +1,5 @@
 {
-  "name": "reelspro",
+  "name": "reelsvibe",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,7 +18,8 @@
     "next": "15.3.4",
     "next-auth": "^4.24.11",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -27,6 +28,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "daisyui": "^5.0.43",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
     "tailwindcss": "^4",

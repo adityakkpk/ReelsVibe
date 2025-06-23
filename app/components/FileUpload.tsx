@@ -9,10 +9,13 @@ interface FileUploadProps {
   fileType?: "image" | "video";
 }
 
+const publicKey = process.env.NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY;
+const endpoint = process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT;
+
 export default function FileUpload({
   onSuccess,
   onProgress,
-  fileType = "image",
+  fileType = "video",
 }: FileUploadProps) {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -82,7 +85,9 @@ export default function FileUpload({
         onUploadProgress={handleProgress}
         onUploadStart={handleStartUpload}
         accept={fileType === "video" ? `video/*` : `image/*`}
-        className="file-input file-input-bordered w-full"
+        className="file-input file-input-bordered w-full text-accent-content"
+        publicKey={publicKey}
+        urlEndpoint={endpoint}
       />
       {uploading && (
         <div className="flex items-center gap-2 text-primary">
